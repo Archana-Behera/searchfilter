@@ -1,7 +1,5 @@
 import React from "react";
 import Data from "./Data";
-// import ReactStars from "react-stars";
-// import Select from 'react-select';
 
 const Search = () => {
     const data = [
@@ -12,29 +10,11 @@ const Search = () => {
         { title: "Maps to the Stars", ratings: "7.5", category: "Drama" }
     ];
 
-    //     const category =[
-    //   { value: 'Action' },
-    //   { value: 'Drama'},
-    //   { value: 'Comedy' },
-    //   { value: 'Thriller' },
-
-    //     ]
-
-    // const projectOptions = category.map((projects) =>{
-    //     return { value: projects.value, label: projects.value};
-    //   })
-
+   
     const [searchInput, setSearchInput] = React.useState("");
     const [filter, setFilter] = React.useState("");
     const [movieType, setMovieType] = React.useState('');
 
-    // let blank=[]
-
-    //  movieType.map((ele)=> blank.push(ele.value.toLowerCase()))
-    //  console.log('jsd',blank)
-
-    // const res= data.filter(ele => blank.includes(ele.category.toLowerCase()))
-    //  console.log("res",res);
 
     let post = data.filter((value) => {
         if ((searchInput === "" && filter === "" && movieType === "" ) || filter === "all" ||movieType === "all"
@@ -115,14 +95,6 @@ const Search = () => {
                             <option value="comedy">Comedy</option>
                             <option value="thriller">Thriller</option>
                         </select>
-                        {/* <Select
-                         className="dropdown"
-                       closeMenuOnSelect={false}
-                      value={movieType}
-                      onChange={setMovieType}
-                    isMulti
-                  options={projectOptions}
-                    /> */}
                     </div>
                 </div>
             </div>
